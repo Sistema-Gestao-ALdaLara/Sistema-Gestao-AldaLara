@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+	<html lang="pt">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Dashboard Admistrador</title>
+			<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+			<script src="../assets/js/bootstrap.min.js"></script>
+			 <style>
+				.bg-image{
+				background-image: url('../imagens/IMG-20250111-WA0001.jpg'); 
+				background-size: cover;
+				background-position: center;
+				height: 125vh; 
+				}
+
+			</style>
+		</head>
+		<body>
+			<!-- Navbar -->
+			<nav class="navbar navbar-dark bg-primary">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">Instituto Politécnico Industrial Alda-Lara</a>
+				</div>
+			</nav>
+			<div class="bg-image d-flex align-items-center justify-content-center">
+				<div class="container m-4">
+					<h2 class="text-center text-white">Gestão de Matrículas</h2>
+					<!-- Formulário de Matrícula -->
+
+					<h4>Efetuar Matrícula</h4>
+					<form action="processa_matricula.php" method="POST">
+						<div class="mb-12">
+						<div class="row">
+							<!-- Nome do Aluno -->
+							<div class="col-md-6 mb-3">
+								<label for="nome" class="form-label text-white">Nome do Aluno</label>
+								<input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome completo" required>
+							</div>
+							<!-- Data de Nascimento -->
+							<div class="col-md-6 mb-3">
+								<label for="sexo" class="form-label text-white">sexo</label>
+								<input type="text" id="sexo" name="sexo" class="form-control"
+								required>
+							</div>
+							<!-- Data de Nascimento -->
+							<div class="col-md-6 mb-3">
+								<label for="data_nascimento" class="form-label text-white">Data de Nascimento</label>
+								<input type="date" id="data_nascimento" name="data_nascimento" class="form-control"required>
+							</div>
+							<div class="col-md-6 mb-3">
+							<label for="Nome" class="form-label text-white">Nome da escola de proveniência:</label>
+								<input type="text" id="nome" name="nome" class="form-control"required>
+							</div>
+							
+						</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="Nome" class="form-label text-white">Funcionário:</label>
+								<input type="text" id="nome" name="nome" class="form-control"required>
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="data" class="form-label text-white ">Data</label>
+								<input type="date" id="data" name="data" class="form-control"required>
+							</div>
+					
+					<button type="submit" class="btn btn-success w-100">Matricular</button>
+					</form>
+
+					<!-- Pesquisa de Matrículas -->
+					<div class="card p-4 mt-4">
+						<h4>Pesquisar Matrículas</h4>
+						<input type="text" class="form-control" placeholder="Digite um nome ou curso...">
+					</div>
+					<!-- Tabela de Matrículas -->
+					<div class="card p-4 mt-8">
+						<h4>Registros de Matrículas</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+								<th>Nome</th>
+								<th>Data de Nascimento</th>
+								<th>Curso</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Exemplo Nome</td>
+									<td>01/01/2000</td>
+									<td>Informática</td>
+								</tr>
+								<tr>
+									<td>Outro Aluno</td>
+									<td>05/02/1999</td>
+									<td>Eletrônica</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div><br>
+			<!-- Footer -->
+				<footer class="bg-dark text-white text-center py-3 mt-15">
+			&copy; 2024 Instituto Politécnico Industrial Alda-Lara. Todos os direitos reservados.</footer>
+		</body>
+	</html>
