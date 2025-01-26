@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--LINK BOOTSTRAP-->
+    <link rel="stylesheet" href="../pages/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../pages/assets/css/bootstrap-icons.min.css">
+
+    <!--LINK css-->
+    <link rel="stylesheet" href="../pages/assets/css/styleautentication.css">
+    
+</head>
+<body>
+   
+   <div class="container">
+        <div class="row">
+       
+            <div class="col-6 bg-image">
+                <div class="">
+                    <div class="logo">
+                        <h1>ALDA LARA</h1>
+                    </div>
+                    <span class="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam architecto maxime delectus nobis tempore aperiam adipisci quidem magni autem quasi? Cum, ullam similique nihil placeat perferendis at fugit dolorem numquam.</span>
+                </div>
+            </div>
+       
+            <div class="card col-6">
+                <h2>Cadastrar</h2>
+                <div class="card-body">
+                    <form action="cadastrar_usuario.php" method="POST">
+                        <div class="row">
+                            <div class="mb-2">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" class="form-control" id="nome" placeholder="seu nome" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="seuemail@gmail.com" required>
+                            </div>
+    
+                            <div class="mb-2">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Digite a sua senha">
+                            </div>
+                            <div class="mb-2">
+                                <label for="confirmsenha">Confirmar a senha</label>
+                                <input type="password" name="confirmsenha" class="form-control" id="confirmsenha" placeholder="Confimar a senha" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="tipo">Tipo de Usuário</label>
+                                <select name="tipo" class="form-control" id="tipo" required>
+                                    <option value="admin">Administrador</option>
+                                    <option value="usuario">Usuário</option>
+                                    <option value="usuario">Usuário</option>
+                                </select>
+                            </div>
+    
+                            <div class="col-12">
+                                <a href="login.html" class="btn">Cadastrar-se</a>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+   </div>
+</div>
+    
+   <!--LINK BOOTSTRAP-->
+    <script src="../pages/assets/css/bootstrap.min.css"></script>
+
+    <!--LINK JAVASCRIPT-->
+    <script src="../pages/assets/js/script.js"></script>
+</body>
+</html>
