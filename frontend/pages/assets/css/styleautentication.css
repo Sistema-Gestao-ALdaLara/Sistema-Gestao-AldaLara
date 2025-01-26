@@ -36,25 +36,6 @@ body{
     align-items: center;
     height: 100vh;
     width: 100%;
-	margin: 50;
-    border-top-style: solid;
-    border-top-width: 40px;
-    border-top-color: blue;
-}
-	
-/*}	.vertical-line{
-	
-		border-left:5px solid black;
-		height:600px;
-		margin:0 50px;
-		
-}*/
-	
-.bg-image{
-    background-image: url('frotend/imagens/IMG-20250111-WA0001.jpg'); 
-    background-size: cover;
-    background-position: center;
-    height: 75vh; 
 }
 
 div.logo{
@@ -64,32 +45,31 @@ div.logo{
     align-items: center;
 }
 
-/*div.container{
+div.container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}*/
+}
 
 div.logo h1{
     font-family: var(--font-second);
-    color: blue;
+    color: var(--colo-main);
     font-size: 3.5rem;
 }
 
-div .card{
-    width: 35%;
-    border: none!important;
-    box-shadow: 0px 0px 7px -1px black;
-    padding: 10px;
+.info{
+    font-family: var(--font-main);
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(5, 5, 154, 0.121);
 }
 
-div.forgot{
-    width: 60%;
+div .card{
     border: none!important;
-    box-shadow: 0px 0px 7px -1px black;
+    box-shadow: -3px -9px 9px -1px black;
     padding: 10px;
-
 }
 
 .card h2{
@@ -98,35 +78,36 @@ div.forgot{
     margin-bottom: 5px;
 }
 
-.card .card-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-body .row{
+.card .row{
     gap: 10px;
 }
 
-.card-body .form-control{
-    border-color: blue!important;
+.card .form-control{
+    border-color: var(--colo-main)!important;
     border: 2px solid;
 }
 
-.card-body a{
+.card a{
     text-decoration: none;
-    color: blue!important;;
+    color: var(--colo-main);
 }
 
-.card-body a.btn{
+.card a.btn{
     width: 100%;
     color: white;
-    background-color: pink;
+    background-color: var(--colo-main);
     padding: 2px;
 }
 
-.card-body div #recuperar-senha{
+.card div #recuperar-senha{
     text-align: center!important;
     margin: 5px 5px 5px 5px;
+}
+
+.bg-image {
+    background-image: url('../img/IMG_20250113_104949.jpg') !important; 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
 }
   
