@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Dashboard para Professores</title>
+    <meta charset="UTF-8">
+  <style>     
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+}
+
+header {
+    background-color: #0078d7;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.card {
+    background:white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 2rem);
+    padding: 1rem;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0.5rem 0;
+}
+
+.card p {
+    color: #555;
+}
+
+.card button {
+    background-color:#0078d7;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.card button:hover {
+    background-color: #9a9e9a;
+}
+
+header{
+    background-color: #3069a1;
+    color: wheat;
+    padding: 1rem;
+
+}
+</style>
+  
+</head>
+
+<body>
+
+    <header>
+        <h1 text-align: center>Dashboard para Professores</h1>
+        </header> 
+
+    <main class="container">
+        <div class="card">
+            <h3>Gerenciar Turmas</h3>
+            <p>Acesse informações e gerencie suas turmas de forma fácil.</p>
+            <a href="turma.html">  <button>Ver Turmas</button></a>
+        </div>
+
+        <div class="card">
+            <h3>Progresso dos Alunos</h3>
+            <p>Acompanhe o desempenho dos alunos com relatórios detalhados.</p>
+            <a href="processo.html"><button>Visualizar Relatórios</button></a>
+        </div>
+
+        <div class="card">
+            <h3>Material Didático</h3>
+            <p>Carregue e acesse materiais para suas aulas.</p>
+            <a href="Materias.html"><button>Gerenciar Materiais</button></a>
+        </div>
+
+        <div class="card">
+            <h3>Calendário</h3>
+            <p>Organize suas aulas e eventos importantes.</p>
+            <a href="calendario.html"> <button>Ver Calendário</button></a>
+        </div>
+
+        <div class="card">
+            <h3>Comunicação</h3>
+            <p>Envie mensagens e interaja com alunos e pais.</p>
+           <a href="comunicação.html"> <button>Acessar Mensagens</button></a>
+        </div>
+
+        <div class="card">
+            <h3>Avaliações</h3>
+            <p>Crie e gerencie avaliações para seus alunos.</p>
+            <a href="Prof.html"> <button> Avaliações </button></a>
+        </div>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>
+
