@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dashboard Admistrador</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/icons/bootstrap-icons.min.css">
+
+	<link rel="stylesheet" href="../assets/css/style-system.css">
+</head>
+<body>
+	<!-- Navbar -->
+	<header class="header">
+		<nav class="navbar navbar-dark bg-primary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Instituto Politécnico Industrial Alda-Lara</a>
+			</div>
+		</nav>
+	</header>
+
+	<!--sidebar-->
+	<aside class="sidebar d-flex flex-column">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-4">
+					<button type="button" class="btn hmb w-100 d-flex align-items-center justify-content-center" id="sidebarToggle"><i class="bi bi-list"></i></button>
+				</div>
+				<div class="col">
+					<h2 class="log">ADMIN</h2>
+				</div>
+			</div>
+		</div>
+		<nav class="text-white vh-100 m-3 flex-grow-1">
+			<ul class="nav flex-column" id="sidebarNav">
+				<li class="nav-item">
+					<a class="nav-link text-white" aria-current="page" href="index.html"><i class="bi bi-house-door-fill"></i> <span class="sidebar-text"></span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="users.html"><i class="bi bi-people-fill"></i> <span class="sidebar-text"></span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#"><i class="bi bi-menu-up"></i> <span class="sidebar-text"></span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="calender-check.html"><i class="bi bi-calendar-check-fill"></i> <span class="sidebar-text"></span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="index.html"><i class="bi bi-box-arrow-right"></i> <span class="sidebar-text">Sair</span></a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+
+	<main class="main">
+		<div class="bg-image d-flex align-items-center justify-content-center">
+			<div class="container m-4">
+				<h2 class="text-center text-white">Gestão de Matrículas</h2>
+				<!-- Formulário de Matrícula -->
+				<div class="card">
+					<h4>Efetuar Matrícula</h4>
+					<form action="processa_matricula.php" method="POST">
+						<div class="mb-12">
+						<div class="row">
+							<!-- Nome do Aluno -->
+							<div class="col-md-6 mb-3">
+								<label for="nome" class="form-label text-white">Nome do Aluno</label>
+								<input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome completo" required>
+							</div>
+							<!-- Data de Nascimento -->
+							<div class="col-md-6 mb-3">
+								<label for="sexo" class="form-label text-white">sexo</label>
+								<input type="text" id="sexo" name="sexo" class="form-control"
+								required>
+							</div>
+							<!-- Data de Nascimento -->
+							<div class="col-md-6 mb-3">
+								<label for="data_nascimento" class="form-label text-white">Data de Nascimento</label>
+								<input type="date" id="data_nascimento" name="data_nascimento" class="form-control"required>
+							</div>
+							<div class="col-md-6 mb-3">
+							<label for="Nome" class="form-label text-white">Nome da escola de proveniência:</label>
+								<input type="text" id="nome" name="nome" class="form-control"required>
+							</div>
+						</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="Nome" class="form-label text-white">Funcionário:</label>
+								<input type="text" id="nome" name="nome" class="form-control"required>
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="data" class="form-label text-white ">Data</label>
+								<input type="date" id="data" name="data" class="form-control"required>
+							</div>
+					<button type="submit" class="btn btn-success w-100">Matricular</button>
+					</form>
+				</div>
+				<!-- Pesquisa de Matrículas -->
+				<div class="card p-4 mt-4">
+					<h4>Pesquisar Matrículas</h4>
+					<input type="text" class="form-control" placeholder="Digite um nome ou curso...">
+				</div>
+				<!-- Tabela de Matrículas -->
+				<div class="card p-4 mt-8">
+					<h4>Registros de Matrículas</h4>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+							<th>Nome</th>
+							<th>Data de Nascimento</th>
+							<th>Curso</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Exemplo Nome</td>
+								<td>01/01/2000</td>
+								<td>Informática</td>
+							</tr>
+							<tr>
+								<td>Outro Aluno</td>
+								<td>05/02/1999</td>
+								<td>Eletrônica</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<script src="../assets/js/bootstrap.min.js"></script>
+	<!--Script para o sidbar-->
+	<script>
+		const sidebarToggle = document.getElementById('sidebarToggle');
+		const sidebar = document.querySelector('.sidebar');
+		const sidebarTextElements = document.querySelectorAll('.sidebar-text');
+		 const body = document.querySelector('body');
+	
+	
+		sidebarToggle.addEventListener('click', () => {
+			sidebar.classList.toggle('collapsed');
+			sidebarTextElements.forEach(el => el.classList.toggle('d-none'));
+	
+		   if (sidebar.classList.contains('collapsed')) {
+				body.style.gridTemplateColumns = '70px 1fr';
+			} else {
+				body.style.gridTemplateColumns = '250px 1fr';
+			}
+	
+		});
+	</script>
+</body>
+</html>

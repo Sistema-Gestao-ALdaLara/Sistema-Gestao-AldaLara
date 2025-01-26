@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.satisfy-regular {
+  font-family: "Satisfy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --bs-fontfirst--fontfamily: "Poppins";
+  --bs-fontsecond--fontfamily: "Satisfy";
+  --bs-color: rgb(18, 99, 240);
+}
+
+ body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    grid-template-rows: 1fr 100vh;
+    grid-template-areas: 
+    "side header"
+    "side main";
+}
+
+
+.header{
+    grid-area: header;
+    box-shadow: 0px 2px 5px -4px black!important;
+    height: auto;
+}
+
+div button, .btn{
+  background-color:rgba(18, 99, 240, 0)!important;
+  border: none!important;
+  color: #ffffff;
+}
+
+header div i{
+  color: #f48505;
+  font-size: 1.3rem;
+}
+
+header div.container{
+  float: right;  
+}
+
+.sidebar {
+  background-color: rgb(18, 99, 240);
+  grid-area: side;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 210px; /* Largura inicial do sidebar */
+  transition: all 0.2s ease-in-out; /* Transição suave para o efeito */
+  z-index: 100;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar.collapsed .log {
+  display: none;
+}
+
+.sidebar .nav-link {
+  display: flex;
+  align-items: center; /* Para centralizar os itens verticalmente */
+  gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.sidebar-text {
+  transition: all 0.3s ease-in-out; /* Transição suave para o efeito */
+}
+
+.sidebar.collapsed .sidebar-text {
+  display: none;
+}
+
+.hmb {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px; 
+  cursor: pointer; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f48505;
+}
+
+.log{
+  font-family: "Satisfy", serif;
+  font-size: 2.2rem;
+  padding: 8%;
+  color: #f48505;
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.bg-image{
+  background-image: url('../img/IMG-20250111-WA0001.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.card .form-control{
+  border-color: #f48505!important;
+  border: 2px solid;
+}
+
+div .card{
+  border: none!important;
+  box-shadow: 1px 0px 9px -1px black;
+  padding: 10px;
+  background-color: #2105f41a;
+}
