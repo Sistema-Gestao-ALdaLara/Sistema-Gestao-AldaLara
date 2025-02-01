@@ -26,7 +26,7 @@
 :root{
     --font-main: "Poppins", sans-serif;
     --font-second: "Satisfy", cursive;
-    --colo-main: #ffb03b;
+    --colo-main: blue;
 }
 
 body{
@@ -36,6 +36,7 @@ body{
     align-items: center;
     height: 100vh;
     width: 100%;
+    background-color: rgba(17, 17, 163, 0.39);
 }
 
 div.logo{
@@ -58,17 +59,18 @@ div.logo h1{
     font-size: 3.5rem;
 }
 
-.info{
+div .info{
     font-family: var(--font-main);
     color: black;
     font-size: 1.5rem;
     text-align: center;
-    background-color: rgba(5, 5, 154, 0.121);
+    border: none!important;
+    background-color: #131cbe2f;
 }
 
 div .card{
     border: none!important;
-    box-shadow: -3px -9px 9px -1px black;
+    box-shadow: 0px 0px 10px -1px #1a07e7;
     padding: 10px;
 }
 
@@ -82,7 +84,7 @@ div .card{
     gap: 10px;
 }
 
-.card .form-control{
+.card .form-control, #lembrar{
     border-color: var(--colo-main)!important;
     border: 2px solid;
 }
@@ -110,4 +112,4 @@ div .card{
     background-position: center;
     height: 100vh; 
 }
-  
+

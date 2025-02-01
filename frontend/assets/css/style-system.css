@@ -124,6 +124,7 @@ header div.container{
   border: 2px solid;
 }
 
+/*transparencia e efeito card*/
 div .card{
   border: none!important;
   box-shadow: 1px 0px 9px -1px black;
