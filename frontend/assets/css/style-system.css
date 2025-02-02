@@ -19,18 +19,17 @@
 }
 
  body{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 210px 1fr;
-    grid-template-rows: 1fr 100vh;
+    grid-template-rows: auto 1fr;
     grid-template-areas: 
     "side header"
     "side main";
-    transition: all 0.2s ease-in-out; /* Transição suave para o efeito */
+    transition: all 0.25s ease-in-out; /* Transição suave para o efeito */
 }
-
 
 .header{
     grid-area: header;
@@ -51,7 +50,7 @@ header div.container{
   left: 0;
   bottom: 0;
   width: 210px; /* Largura inicial do sidebar */
-  transition: all 0.2s ease-in-out; /* Transição suave para o efeito */
+  transition: all 0.25s ease-in-out; /* Transição suave para o efeito */
   z-index: 100;
 }
 
@@ -86,21 +85,18 @@ header div.container{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f48505;
 }
 
 .log{
   font-family: "Satisfy", serif;
   font-size: 2.2rem;
   padding: 8%;
-  color: #f48505;
 }
 
 .main{
     grid-area: main;
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 .bg-image{
@@ -120,4 +116,43 @@ div .card{
   box-shadow: 1px 0px 9px -1px black;
   padding: 10px;
   background-color: #2105f41f;
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo levemente destacado */
+  border-radius: 5px; /* Borda arredondada */
+  font-weight: bold; /* Deixar o texto mais forte */
+}
+
+
+/* Estilização das bolinhas do spinner*/
+.dots-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 60px; /* Tamanho da área do spinner */
+  height: 60px;
+}
+
+.dot {
+  width: 12px; 
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  animation: spin 1.5s linear infinite;
+}
+
+/* Cores alternadas para um efeito bonito */
+.dot:nth-child(1) { background-color: #007bff; animation-delay: 0s; }   /* Azul */
+.dot:nth-child(2) { background-color: #ffc107; animation-delay: 0.2s; } /* Amarelo */
+.dot:nth-child(3) { background-color: #e83e8c; animation-delay: 0.4s; } /* Rosa */
+.dot:nth-child(4) { background-color: #007bff; animation-delay: 0.6s; } /* Verde */
+.dot:nth-child(5) { background-color: #ffc107; animation-delay: 0.8s; } /* Laranja */
+.dot:nth-child(6) { background-color: #e83e8c; animation-delay: 1s; }   /* Roxo */
+
+/* Animação de rotação */
+@keyframes spin {
+  0% { transform: rotate(0deg) translateX(25px); }
+  100% { transform: rotate(360deg) translateX(25px); }
 }
