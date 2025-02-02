@@ -31,9 +31,9 @@
     transition: all 0.25s ease-in-out; /* Transição suave para o efeito */
 }
 
-.header{
+.header, .header .navbar{
     grid-area: header;
-    box-shadow: 0px 2px 5px -4px black!important;
+    box-shadow: 0px 4px 30px -1px rgb(22, 134, 220)!important;
     height: auto;
 }
 
