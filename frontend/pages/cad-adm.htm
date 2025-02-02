@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Administrador</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+   <div class="container">
+        <div class="card">
+            <h2>Cadastrar Administrador</h2>
+            <div class="card-body">
+                <form action="cadastrar_administrador.php" method="POST">
+                    <div class="mb-2">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="seuemail@aldalara.edu" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="matricula">Número de Matrícula</label>
+                        <input type="text" name="matricula" class="form-control" id="matricula" placeholder="Número de matrícula" required>
+                    </div>
+                    <div class="mb-2">
+                        <button type="submit" class="btn btn-primary">Cadastrar Administrador</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
