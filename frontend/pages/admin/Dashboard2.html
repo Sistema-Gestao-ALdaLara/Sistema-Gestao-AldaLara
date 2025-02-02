@@ -6,26 +6,18 @@
 		<title>Dashboard do Administrador</title>
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    	<link rel="stylesheet" href="../assets/css/icons/bootstrap-icons.min.css">
+		<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css">
 		 <!--LINK css-->
-		 <link rel="stylesheet" href="../assets/css/style-system.css">
+		 <link rel="stylesheet" href="../../assets/css/style-system.css">
    
 	</head>
 	<body>
 		<!-- Navbar -->
 		<header class="header">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-				<div class="container-fluid">
+			<nav class="navbar navbar-dark bg-primary">
+				<div class="container-fluid justify-content-end">
 					<a class="navbar-brand" href="#">Painel do Administrador</a>
-					
-					<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
-						<li class="nav-item"><a class="nav-link" href="#matricula">Matrícula</a></li>
-						<li class="nav-item"><a class="nav-link" href="conta-professores.html">Professor</a></li>
-					</ul>
-					</div>
 				</div>
 			</nav>
 		</header>
@@ -45,16 +37,25 @@
 			<nav class="text-white vh-100 m-3 flex-grow-1">
 				<ul class="nav flex-column" id="sidebarNav">
 					<li class="nav-item">
-						<a class="nav-link text-white" aria-current="#" href="index.html"><i class="bi bi-house-door-fill"></i> <span class="sidebar-text"></span></a>
+						<a class="nav-link text-white" aria-current="#" href="index.html"><i class="bi bi-house-door-fill"></i><span class="sidebar-text">Dashboard</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white" href="#"><i class="bi bi-people-fill"></i> <span class="sidebar-text"></span></a>
+						<a class="nav-link text-white" href="#"><i class="bi bi-people-fill"></i> <span class="sidebar-text">Alunos</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white" href="#"><i class="bi bi-menu-up"></i> <span class="sidebar-text"></span></a>
+						<a class="nav-link text-white" href="#"><i class="bi bi-menu-up"></i> <span class="sidebar-text">Turmas</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white" href="#"><i class="bi bi-calendar-check-fill"></i> <span class="sidebar-text"></span></a>
+						<a class="nav-link text-white" href="#"><i class="bi bi-book"></i> <span class="sidebar-text">Disciplinas</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="notas-presencas.html"><i class="bi bi-calendar-check-fill"></i> <span class="sidebar-text">Notas e Presenças </span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="financeiro.html"><i class="bi bi-cash-stack"></i> <span class="sidebar-text">Financeiro</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="configuracoes.html"><i class="bi bi-gear-fill"></i><span class="sidebar-text">Configurações</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-white" href="Dashboard2.html"><i class="bi bi-box-arrow-right"></i> <span class="sidebar-text">Sair</span></a>
@@ -63,64 +64,71 @@
 			</nav>
 		  </aside>
 
-		<!-- Conteúdo Principal -->
-		<main class="main bg-image">
-			<div class="bg-image d-flex align-items-center justify-content-center">
-				<div class="container my-5" >
-					<h1 class="text-center mb-4" >INSTITUTO POLITÉCNICO INDUSTRIAL ALDA-LARA</h1>
-					<div class="row">
-						<!-- Cartões com Resumo -->
-						<div class="col-md-3">
-							<a href="alunos.html" class="text-decoration-none">
-								<div class="card bg-primary text-white">
-									<div class="card-body">
+		 <!-- Conteúdo Principal -->
+		 <main class="main bg-image">
+			<div class="container my-5">
+				<h1 class="text-center mb-4">INSTITUTO POLITÉCNICO INDUSTRIAL ALDA-LARA</h1>
+				<div class="row row-cols-1 row-cols-md-3 g-4">
+					<!-- Cartões com Resumo -->
+					<div class="col">
+						<a href="../student/dashboard-aluno.html" class="text-decoration-none">
+							<div class="card bg-primary text-white h-100">
+								<div class="card-body d-flex align-items-center">
+									<i class="bi bi-people-fill fs-2 me-3"></i>
+									<div>
 										<h3>0</h3>
 										<p>Alunos Matriculados</p>
 									</div>
 								</div>
-							</a>
-						</div>
-
-						<div class="col-md-3">
-							<a href="professores.html" class="text-decoration-none">
-								<div class="card bg-primary text-white">
-									<div class="card-body">
+							</div>
+						</a>
+					</div>
+					<div class="col">
+						<a href="professores.html" class="text-decoration-none">
+							<div class="card bg-primary text-white h-100">
+								<div class="card-body d-flex align-items-center">
+									<i class="bi bi-person-badge fs-2 me-3"></i>
+									<div>
 										<h3>0</h3>
 										<p>Professores</p>
 									</div>
 								</div>
-							</a>
-						</div>
-
-						<div class="col-md-3">
-							<a href="turmas.html" class="text-decoration-none">
-								<div class="card bg-primary text-white">
-									<div class="card-body">
+							</div>
+						</a>
+					</div>
+					<div class="col">
+						<a href="turmas.html" class="text-decoration-none">
+							<div class="card bg-primary text-white h-100">
+								<div class="card-body d-flex align-items-center">
+									<i class="bi bi-card-list fs-2 me-3"></i>
+									<div>
 										<h3>0</h3>
 										<p>Turmas</p>
 									</div>
 								</div>
-							</a>
-						</div>
-
-						<div class="col-md-3">
-							<a href="matriculas.html" class="text-decoration-none">
-								<div class="card bg-primary text-white">
-									<div class="card-body">
-										<h3>Matricular</h3>
-										<p>...</p>
+							</div>
+						</a>
+					</div>
+					<div class="col">
+						<a href="disciplinas.html" class="text-decoration-none">
+							<div class="card bg-primary text-white h-100">
+								<div class="card-body d-flex align-items-center">
+									<i class="bi bi-book fs-2 me-3"></i>
+									<div>
+										<h3>0</h3>
+										<p>Disciplinas</p>
 									</div>
 								</div>
-							</a>
-						</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
-		</main>
+		</main>	
 
 		<!-- Bootstrap JS -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
 
 		<!--Script para o sidbar-->
 		<script>
@@ -137,7 +145,7 @@
 			   if (sidebar.classList.contains('collapsed')) {
 					body.style.gridTemplateColumns = '70px 1fr';
 				} else {
-					body.style.gridTemplateColumns = '250px 1fr';
+					body.style.gridTemplateColumns = '210px 1fr';
 				}
 		
 			});

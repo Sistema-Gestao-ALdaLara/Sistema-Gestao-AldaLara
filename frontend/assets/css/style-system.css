@@ -28,6 +28,7 @@
     grid-template-areas: 
     "side header"
     "side main";
+    transition: all 0.2s ease-in-out; /* Transição suave para o efeito */
 }
 
 
@@ -35,17 +36,6 @@
     grid-area: header;
     box-shadow: 0px 2px 5px -4px black!important;
     height: auto;
-}
-
-div button, .btn{
-  background-color:rgba(18, 99, 240, 0)!important;
-  border: none!important;
-  color: #ffffff;
-}
-
-header div i{
-  color: #f48505;
-  font-size: 1.3rem;
 }
 
 header div.container{
@@ -129,5 +119,5 @@ div .card{
   border: none!important;
   box-shadow: 1px 0px 9px -1px black;
   padding: 10px;
-  background-color: #2105f41a;
+  background-color: #2105f41f;
 }
