@@ -116,8 +116,16 @@ div .card{
 
 .nav-link.active {
   background-color: rgba(255, 255, 255, 0.2); /* Fundo levemente destacado */
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+label {
+  background-color: rgba(255, 255, 255, 0.402); /* Fundo levemente destacado */
   border-radius: 5px; /* Borda arredondada */
-  font-weight: bold; /* Deixar o texto mais forte */
+  padding: 3px;
+  font-weight: 500; /* Deixar o texto mais forte */
+  color: #007bff;
 }
 
 

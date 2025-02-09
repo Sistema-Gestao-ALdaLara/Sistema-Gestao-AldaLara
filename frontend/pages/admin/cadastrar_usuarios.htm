@@ -38,7 +38,7 @@
         </header>
 
         <!--sidebar-->
-        <aside class="sidebar d-flex flex-column">
+        <aside class="sidebar d-flex flex-column bg-primary">
             <div class="container text-center d-flex align-items-center justify-content-center">
                 <div class="row">
                     <div class="col">
@@ -77,7 +77,7 @@
                     </li>
                 </ul>
             </nav>
-            </aside>
+        </aside>
 
         <main class="main">
             <div class="bg-image d-flex align-items-center justify-content-center">
@@ -98,6 +98,10 @@
                                 <input type="password" class="form-control" id="senha" name="senha" required>
                             </div>
                             <div class="mb-3">
+                                <label for="confirme" class="form-label">Confirme a Senha</label>
+                                <input type="password" class="form-control" id="confirme" name="confirme" required>
+                            </div>
+                            <div class="mb-3">
                                 <label for="tipo" class="form-label">Tipo de Usuário</label>
                                 <select class="form-control" id="tipo" name="tipo" required>
                                     <option value="Professor">Professor</option>
@@ -105,7 +109,7 @@
                                     <option value="Secretariado">Secretariado</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                            <button type="submit" class="btn btn-success w-100">Cadastrar</button>
                         </form>
                     </div>
                 </div>

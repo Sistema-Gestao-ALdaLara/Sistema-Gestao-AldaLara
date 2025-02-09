@@ -72,6 +72,12 @@ div .card{
     border: none!important;
     box-shadow: 0px 0px 10px -1px #1a07e7;
     padding: 10px;
+    overflow: auto;
+    scrollbar-width: none;  /* Esconde em Firefox */
+}
+
+div .card::-webkit-scrollbar {
+    display: none; /* Esconde em Chrome, Edge e Safari */
 }
 
 .card h2{
@@ -89,16 +95,9 @@ div .card{
     border: 2px solid;
 }
 
-.card a{
+.card a, .card button{
     text-decoration: none;
     color: var(--colo-main);
-}
-
-.card a.btn{
-    width: 100%;
-    color: white;
-    background-color: var(--colo-main);
-    padding: 2px;
 }
 
 .card div #recuperar-senha{
