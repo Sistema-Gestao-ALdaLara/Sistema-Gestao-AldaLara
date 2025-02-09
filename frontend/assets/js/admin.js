@@ -1,4 +1,3 @@
-
 const sidebarToggle = document.getElementById('sidebarToggle');
 const sidebar = document.querySelector('.sidebar');
 const sidebarTextElements = document.querySelectorAll('.sidebar-text');
@@ -14,7 +13,6 @@ sidebarToggle.addEventListener('click', () => {
     } else {
         body.style.gridTemplateColumns = '210px 1fr';
     }
-
 });
 
 /** script para o loader */

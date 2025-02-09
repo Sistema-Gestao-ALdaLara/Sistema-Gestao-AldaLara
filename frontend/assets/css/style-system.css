@@ -35,14 +35,10 @@
     grid-area: header;
     box-shadow: 0px 4px 30px -1px rgb(22, 134, 220)!important;
     height: auto;
-}
-
-header div.container{
-  float: right;  
+    
 }
 
 .sidebar {
-  background-color: rgb(18, 99, 240);
   grid-area: side;
   height: 100%;
   position: fixed;

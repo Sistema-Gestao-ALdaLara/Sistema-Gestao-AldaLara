@@ -142,24 +142,6 @@
 	
 	<script src="../../assets/js/bootstrap.min.js"></script>
 	<!--Script para o sidbar-->
-	<script>
-		const sidebarToggle = document.getElementById('sidebarToggle');
-		const sidebar = document.querySelector('.sidebar');
-		const sidebarTextElements = document.querySelectorAll('.sidebar-text');
-		 const body = document.querySelector('body');
-	
-	
-		sidebarToggle.addEventListener('click', () => {
-			sidebar.classList.toggle('collapsed');
-			sidebarTextElements.forEach(el => el.classList.toggle('d-none'));
-	
-		   if (sidebar.classList.contains('collapsed')) {
-				body.style.gridTemplateColumns = '70px 1fr';
-			} else {
-				body.style.gridTemplateColumns = '250px 1fr';
-			}
-	
-		});
-	</script>
+	<script src="../../assets/js/admin.js"></script>
 </body>
 </html>

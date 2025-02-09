@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="PT-POR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Dashboard do Administrador</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css">
+		 <!--LINK css-->
+		 <link rel="stylesheet" href="../../assets/css/style-system.css">
+   
+    </head>
+    <body>
+        
+        <!-- Loader Colorido -->
+        <div id="loader" 
+            class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white"
+            style="z-index: 1050;">
+            <div class="dots-loader">
+                <span class="dot dot-blue"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-blue"></span>
+                <span class="dot dot-pink"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-pink"></span>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <header class="header">
+            <nav class="navbar navbar-dark bg-primary">
+                <div class="container-fluid justify-content-end">
+                    <a class="navbar-brand" href="#">Painel do Administrador</a>
+                </div>
+            </nav>
+        </header>
+
+        <!--sidebar-->
+        <aside class="sidebar d-flex flex-column">
+            <div class="container text-center d-flex align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn hmb w-100 text-white" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                    </div>
+                    <div class="col">
+                        <h2 class="log text-white">ADMIN</h2>
+                    </div>
+                </div>
+            </div>
+            <nav class="text-white vh-100 m-3 flex-grow-1">
+                <ul class="nav flex-column" id="sidebarNav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="#" href="Dashboard2.html"><i class="bi bi-house-door-fill"></i><span class="sidebar-text">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="bi bi-people-fill"></i> <span class="sidebar-text">Alunos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="g_turmas.htm"><i class="bi bi-menu-up"></i> <span class="sidebar-text">Turmas</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="g_disp.htm"><i class="bi bi-book"></i> <span class="sidebar-text">Disciplinas</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="notas-presencas.html"><i class="bi bi-calendar-check-fill"></i> <span class="sidebar-text">Notas e Presenças </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="financeiro.html"><i class="bi bi-cash-stack"></i> <span class="sidebar-text">Financeiro</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="configuracoes.html"><i class="bi bi-gear-fill"></i><span class="sidebar-text">Configurações</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../../../index.html"><i class="bi bi-box-arrow-right"></i> <span class="sidebar-text">Sair</span></a>
+                    </li>
+                </ul>
+            </nav>
+            </aside>
+
+        <main class="main">
+            <div class="bg-image d-flex align-items-center justify-content-center">
+                <div class="container m-4">
+                    <div class="card">
+                        <h2 class="text-center">Cadastrar Novo Usuário</h2>
+                        <form action="processar_cadastro.php" method="POST">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-control" id="nome" name="nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" name="senha" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipo" class="form-label">Tipo de Usuário</label>
+                                <select class="form-control" id="tipo" name="tipo" required>
+                                    <option value="Professor">Professor</option>
+                                    <option value="Aluno">Aluno</option>
+                                    <option value="Secretariado">Secretariado</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/admin.js"></script>	
+    </body>
+</html>
