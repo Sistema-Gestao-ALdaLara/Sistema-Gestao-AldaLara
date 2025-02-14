@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor - School Management System</title>
+    <!-- Link para o CSS do Bootstrap -->
+   <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="../../assets/css/icons/bootstrap-icons.min.css">
+    <!-- Link para o CSS personalizado -->
+    <link href="../../assets/css/styles-1.css" rel="stylesheet">
+	 <link rel="stylesheet" href="../../assets/css/style-system.css">
+</head>
+<body>
+		<!-- Loader Colorido -->
+		<div id="loader" 
+			class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white"
+			style="z-index: 1050;">
+			<div class="dots-loader">
+				<span class="dot dot-blue"></span>
+				<span class="dot dot-yellow"></span>
+				<span class="dot dot-blue"></span>
+				<span class="dot dot-pink"></span>
+				<span class="dot dot-yellow"></span>
+				<span class="dot dot-pink"></span>
+			</div>
+		</div>
+
+		<!-- Navbar -->
+		<header class="header">
+			<nav class="navbar navbar-dark bg-primary">
+				<div class="container-fluid justify-content-end">
+					<a class="navbar-brand" href="#">Painel do Professor</a>
+				</div>
+			</nav>
+		</header>
+
+		<!--sidebar-->
+		<aside class="sidebar d-flex flex-column bg-primary">
+			<div class="text-center d-flex align-items-center justify-content-center">
+				<div class="row">
+					<div class="col">
+						<button type="button" class="btn hmb w-100 text-white" id="sidebarToggle"><i class="bi bi-list"></i></button>
+					</div>
+					<div class="col">
+						<h2 class="log text-white">Professor</h2>
+					</div>
+				</div>
+			</div>
+			<nav class="text-white vh-100 m-3 flex-grow-1">
+				<ul class="nav flex-column" id="sidebarNav">
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#"><i class="bi bi-people-fill"></i> <span class="sidebar-text">Alunos</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="g_turmas.htm"><i class="bi bi-menu-up"></i> <span class="sidebar-text">Turmas</span></a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link text-white" href="configuracoes.html"><i class="bi bi-gear-fill"></i><span class="sidebar-text">Configurações</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="../../../index.html"><i class="bi bi-box-arrow-right"></i> <span class="sidebar-text">Sair</span></a>
+					</li>
+				</ul>
+			</nav>
+		  </aside>
+		<!-- Conteúdo Principal -->
+	<main class="main bg-image"><br><br>
+		<div>
+				<h1 class="text-center mb-4">INSTITUTO POLITÉCNICO INDUSTRIAL ALDA-LARA</h1>
+		</div>
+			<div class="container mt-5">
+				<h1 class="text-center mb-4">Lançamento de Notas</h1>
+				<form id="gradeForm">
+					<div class="mb-3">
+						<label for="student" class="form-label">Aluno</label>
+						 <input type="text" class="form-control" required >
+						<select class="form-select" id="student" >
+							<option value="">Selecione o aluno</option>
+							<!-- Opções de alunos serão carregadas dinamicamente -->
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="subject" class="form-label">Disciplina</label>
+						 <input type="text" class="form-control" required>
+						<select class="form-select" id="subject" >
+							<option value="">Selecione a disciplina</option>
+							<!-- Opções de disciplinas serão carregadas dinamicamente -->
+						</select>
+					</div>
+					 <div class="mb-3">
+						<label for="class" class="form-label">Turma</label>
+						<input type="text" class="form-control" id="turma" required>
+							<select class="form-select" id="class" >
+								<option value="">Selecione a turma</option>
+							</select>
+					</div>
+					<div class="mb-3">
+						<label for="grade" class="form-label">Nota</label>
+						<input type="number" class="form-control" id="grade" step="0.01" min="0" max="20" required>
+					</div>
+					<div class="mb-3">
+						<label for="trimester" class="form-label">Trimestre</label>
+						<select class="form-select" id="trimester" required>
+							<option value="">Selecione o trimestre</option>
+							<option value="1">1º Trimestre</option>
+							<option value="2">2º Trimestre</option>
+							<option value="3">3º Trimestre</option>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-primary">Lançar Nota</button>
+				</form>
+				<div id="message" class="mt-4"></div>
+			</div>
+			</div>
+		
+	</main>	
+
+    <!-- Link para o JS do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link para o JS personalizado -->
+    <script src="../../assets/js/teacher.js"></script>
+	<script src="../../assets/js/bootstrap.min.js"></script>
+	<script src="../../assets/js/admin.js"></script>
+</body>
+</html>
